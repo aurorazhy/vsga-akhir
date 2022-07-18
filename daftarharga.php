@@ -1,5 +1,5 @@
-<?php include 'conn.php';
-include 'header.php' ?>
+<?php include 'etc/conn.php';
+include 'etc/header.php' ?>
 <div class="mt=5 pt-5">
 
    <table class="table table-light table-striped table-hover mt-5 pt-5">
@@ -12,23 +12,21 @@ include 'header.php' ?>
             <th scope="col"></th>
          </tr>
       </thead>
-      <tbody>
-         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td><a href="#" class="btn btn-danger">X</a></td>
-         </tr>
-         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td></td>
-            <td><a href="#" class="btn btn-danger">X</a></td>
-         </tr>
-      </tbody>
+      <?php
+      $no = 1;
+      $data = mysqli_query($con, "SELECT * FROM tempat");
+      while ($t = mysqli_fetch_array($data)) { ?>
+         <tbody>
+            <tr>
+               <th scope="row"><?= $no++ ?></th>
+               <td><?= $t['nama'] ?></td>
+               <td><?= $t['lokasi'] ?></td>
+               <td><?= $t['harga'] ?></td>
+               <td><a href="#" class="btn btn-danger">X</a></td>
+            </tr>
+         </tbody>
+      <?php } ?>
    </table>
 </div>
-<?php include 'footer.php' ?>
+<?php include 'etc/footer.php' ?>
 a
