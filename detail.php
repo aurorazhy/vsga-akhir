@@ -15,27 +15,27 @@ $id = $_GET['id']; ?>
                <?php $data = mysqli_query($con, "SELECT * FROM tempat WHERE id = '$id'");
                while ($t = mysqli_fetch_array($data)) { ?>
                   <div class="carousel-item active">
-                     <img src="images/<?= $t['gambar1'] ?>" class="d-block w-100" height="250" alt="...">
-                     <div class="carousel-caption d-none d-md-block">
-                        <p>Rp <?= $t['harga'] ?>/orang</p>
+                     <img src="images/<?= $t['gambar1'] ?>" class="d-block w-100" height="250">
+                     <div class="carousel-caption d-md-block">
+                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar2'] ?>" class="d-block w-100" height="250" alt="...">
-                     <div class="carousel-caption d-none d-md-block">
-                        <p>Rp <?= $t['harga'] ?>/orang</p>
+                     <img src="images/<?= $t['gambar2'] ?>" class="d-block w-100" height="250">
+                     <div class="carousel-caption d-md-block">
+                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar3'] ?>" class="d-block w-100" height="250" alt="...">
-                     <div class="carousel-caption d-none d-md-block">
-                        <p>Rp <?= $t['harga'] ?>/orang</p>
+                     <img src="images/<?= $t['gambar3'] ?>" class="d-block w-100" height="250">
+                     <div class="carousel-caption d-md-block">
+                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar4'] ?>" class="d-block w-100" height="250" alt="...">
-                     <div class="carousel-caption d-none d-md-block">
-                        <p>Rp <?= $t['harga'] ?>/orang</p>
+                     <img src="images/<?= $t['gambar4'] ?>" class="d-block w-100" height="250">
+                     <div class="carousel-caption d-md-block">
+                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                <?php } ?>
