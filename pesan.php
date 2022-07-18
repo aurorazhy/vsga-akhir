@@ -48,9 +48,17 @@ include 'etc/header.php' ?>
          <input type="number" name="total" id="total" class="form-control" disabled>
       </div>
 
+      <div class="input-group flex-nowrap pe-5 mt-4">
+         <ul class="list-group">
+            <li class="list-group-item " style="width: auto;">
+               <input type="checkbox" required> Saya dan/atau rombongan telah membaca, memahami, dan setuju berdasarkan syarat dan ketentuan yang telah ditentukan
+            </li>
+         </ul>
+      </div>
+
       <button type="button" onclick="jumlah()" class="btn btn-danger">Hitung total</button>
       <button type="submit" class="btn btn-danger">Pesan Tiket</button>
-      <button type="reset" href="#" class="btn btn-danger">Batal</button>
+      <button type="reset" class="btn btn-danger">Batal</button>
    </div>
 </form>
 <script type="text/javascript">

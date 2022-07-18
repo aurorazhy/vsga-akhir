@@ -1,7 +1,8 @@
 <?php include 'etc/conn.php';
 include 'etc/header.php' ?>
-<div class="mt=5 pt-5">
 
+<div class="mt=5 pt-5">
+   <h1>Daftar Harga</h1>
    <table class="table table-light table-striped table-hover mt-5 pt-5">
       <thead>
          <tr class="table-info">
@@ -22,7 +23,7 @@ include 'etc/header.php' ?>
                <td><?= $t['nama'] ?></td>
                <td><?= $t['lokasi'] ?></td>
                <td><?= $t['harga'] ?></td>
-               <td><a href="#" class="btn btn-danger">X</a></td>
+               <td><a href="hapustmpt.php?idt=<?= $t['id'] ?>" class="btn btn-danger"><i class="fas fa-times"></i></a></td>
             </tr>
          </tbody>
       <?php } ?>
