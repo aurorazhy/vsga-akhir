@@ -3,6 +3,7 @@ include 'etc/header.php'; ?>
 
 <div class="mt=5 pt-5">
    <h1>Daftar Pesan</h1>
+   <p>Note : Tiket yang sudah dibeli tidak bisa ditambah atau dibatalkan.</p>
    <table class="table table-light table-striped table-hover mt-5 pt-5">
       <thead>
          <tr class="table-info">

@@ -51,7 +51,7 @@ include 'etc/header.php' ?>
       <div class="input-group flex-nowrap pe-5 mt-4">
          <ul class="list-group">
             <li class="list-group-item " style="width: auto;">
-               <input type="checkbox" required> Saya dan/atau rombongan telah membaca, memahami, dan setuju berdasarkan syarat dan ketentuan yang telah ditentukan
+               <input type="checkbox" required> Saya dan/atau rombongan telah membaca, memahami, dan setuju berdasarkan syarat dan ketentuan yang telah ditetapkan
             </li>
          </ul>
       </div>
