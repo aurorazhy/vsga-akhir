@@ -1,5 +1,5 @@
-<?php include '../etc/conn.php';
-include '../etc/header.php'; ?>
+<?php include 'etc/conn.php';
+include 'etc/header.php'; ?>
 <style>
    table {
       border: 0px;
@@ -73,10 +73,10 @@ include '../etc/header.php'; ?>
          </div>
       </div>
       <center>
-         <a href="../index.php" class="btn btn-secondary px-4">Selesai</a>
+         <a href="index.php" class="btn btn-secondary px-4">Selesai</a>
          <button type="submit" class="btn btn-dark px-4"><i class="fas fa-print"></i>
       </center>
    </div>
 </form>
 
-<?php include '../etc/footer.php' ?>
+<?php include 'etc/footer.php' ?>

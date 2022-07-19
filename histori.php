@@ -28,7 +28,7 @@ include 'etc/header.php'; ?>
                <td><?= $c['nama'] ?></td>
                <td><?= $c['tanggal'] ?></td>
                <td><?= $c['total'] ?></td>
-               <td><a href="proses/historidetail.php?idh=<?= $c['idcus'] ?>" class="btn btn-warning"><i class="fas fa-info"></i></a></td>
+               <td><a href="historidetail.php?idh=<?= $c['idcus'] ?>" class="btn btn-warning"><i class="fas fa-info"></i></a></td>
                <td><a href="proses/hapuscus.php?idh=<?= $c['idcus'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Dihapus?');"><i class="fas fa-times"></i></a></td>
             </tr>
          </tbody>

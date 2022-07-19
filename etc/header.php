@@ -25,13 +25,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav">
                   <li class="nav-item">
-                     <a class="nav-link" href="pesan.php">Pemesanan</a>
+                     <a class="nav-link" href="pesan.php">Pesan Tiket</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="daftarharga.php">Daftar Harga</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="histori.php">Daftar Pesan</a>
+                     <a class="nav-link" href="histori.php">Daftar Pesanan</a>
                   </li>
                </ul>
             </div>

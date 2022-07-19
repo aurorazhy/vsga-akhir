@@ -2,7 +2,7 @@
 include 'etc/header.php' ?>
 <form action="proses/receipt.php" method="POST" name="awal">
    <div class="mx-5 p-5">
-      <h1 class="mb-5">Form Pemesanan</h1>
+      <h1 class="mb-5">Form Pemesanan Tiket</h1>
 
       <div class="input-group flex-nowrap pe-5 mt-4">
          <span class="input-group-text" id="addon-wrapping" style="width: 10rem;">Nama</span>
