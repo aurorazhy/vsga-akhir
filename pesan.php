@@ -64,20 +64,20 @@ include 'etc/header.php' ?>
 </form>
 <script type="text/javascript">
    function setharga() {
-      var w = document.awal.wisata.selectedIndex;
-      var url_add = document.awal.wisata.options[w].value;
-      document.getElementById("harga").value = url_add;
+      var s = document.awal.wisata.selectedIndex;
+      var chosen = document.awal.wisata.options[s].value;
+      document.getElementById("harga").value = chosen;
    }
 
    function jumlah() {
       hrg = document.getElementById("harga").value;
-      an = document.getElementById("anak").value;
-      dew = document.getElementById("dewasa").value;
-      hrgdew = hrg * dew;
-      hrgan = hrg * an;
-      hrgann = hrgan * 50 / 100;
-      hrgsemua = hrgdew + hrgann;
-      document.getElementById("total").value = hrgsemua;
+      anak = document.getElementById("anak").value;
+      dewasa = document.getElementById("dewasa").value;
+      hrgDewasa = hrg * dewasa;
+      hrgAnak = hrg * anak;
+      hrgAnakDiskon = hrgAnak * 50 / 100;
+      hrgTotal = hrgDewasa + hrgAnakDiskon;
+      document.getElementById("total").value = hrgTotal;
    }
 </script>
 
