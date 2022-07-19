@@ -15,13 +15,14 @@ include '../etc/header.php'; ?>
       height: 2rem;
    }
 </style>
-<div class="mx-auto pt-5 my-5" style="width: 30rem;">
-   <div class="card my-5 p-3">
-      <div class="card-body">
-         <p class="fs-4 font-monospace text-center m-0">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
-         <p class="fs-4 font-monospace text-center m-0 ">RECEIPT</p>
-         <p class="fs-4 font-monospace text-center m-0 mt-2 mb-4">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
-         <form action="">
+<form action="print.php" method="post">
+   <div class="mx-auto pt-5 my-5" style="width: 30rem;">
+      <div class="card my-5 p-3">
+         <div class="card-body">
+            <p class="fs-4 font-monospace text-center m-0">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
+            <p class="fs-4 font-monospace text-center m-0 ">RECEIPT</p>
+            <p class="fs-4 font-monospace text-center m-0 mt-2 mb-4">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
+
             <?php
             $id = $_GET['idh'];
             $cus = mysqli_query($con, "SELECT * FROM customer INNER JOIN tempat ON tempat = harga WHERE idcus = $id");
@@ -30,7 +31,7 @@ include '../etc/header.php'; ?>
                   <tr>
                      <td>Nama</td>
                      <td class="divider"> : </td>
-                     <td><?= $c['namacus'] ?></td>
+                     <td><input type="hidden" name="id" value="<?= $id ?>"><?= $c['namacus'] ?></td>
                   </tr>
                   <tr>
                      <td>No Identitas</td>
@@ -69,12 +70,13 @@ include '../etc/header.php'; ?>
                   </tr>
                </table>
             <?php } ?>
-         </form>
+         </div>
       </div>
+      <center>
+         <a href="../index.php" class="btn btn-secondary px-4">Selesai</a>
+         <button type="submit" class="btn btn-dark px-4"><i class="fas fa-print"></i>
+      </center>
    </div>
-   <center>
-      <a href="../index.php" class="btn btn-secondary px-4">Selesai</a>
-   </center>
-</div>
+</form>
 
 <?php include '../etc/footer.php' ?>

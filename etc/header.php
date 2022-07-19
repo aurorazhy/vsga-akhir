@@ -33,9 +33,6 @@
                   <li class="nav-item">
                      <a class="nav-link" href="histori.php">Daftar Pesan</a>
                   </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="tentang.php">Tentang</a>
-                  </li>
                </ul>
             </div>
          </div>
