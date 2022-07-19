@@ -4,17 +4,17 @@ include '../etc/conn.php';
 $nama = $_POST['nama'];
 $noid = $_POST['noidentitas'];
 $nohp = $_POST['nohp'];
-$tempat = $_POST['wisata'];
+$harga = $_POST['wisata'];
 $tanggal = $_POST['tanggal'];
 $dewasa = $_POST['dewasa'];
 $anak = $_POST['anak'];
 
-$hrgdew = $tempat * $dewasa;
-$hrgan = $tempat * $anak;
+$hrgdew = $harga * $dewasa;
+$hrgan = $harga * $anak;
 $hrgann = $hrgan * 50 / 100;
 $total = $hrgdew + $hrgann;
 
-mysqli_query($con, "INSERT INTO customer VALUES('','$nama','$noid','$nohp','$tempat','$tanggal','$dewasa','$anak','$total')");
+mysqli_query($con, "INSERT INTO customer VALUES('','$nama','$noid','$nohp','$harga','$tanggal','$dewasa','$anak','$total')");
 
 include '../etc/header.php' ?>
 <style>
@@ -58,7 +58,7 @@ include '../etc/header.php' ?>
                <tr>
                   <td>Tempat</td>
                   <td class="divider"> : </td>
-                  <?php $te = mysqli_query($con, "SELECT nama FROM tempat WHERE harga = $tempat");
+                  <?php $te = mysqli_query($con, "SELECT nama FROM tempat WHERE harga = $harga");
                   while ($t = mysqli_fetch_array($te)) { ?>
                      <td><?= $t['nama'] ?></td>
                   <?php } ?>

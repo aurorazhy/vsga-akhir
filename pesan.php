@@ -36,9 +36,9 @@ include 'etc/header.php' ?>
 
       <div class="input-group flex-nowrap pe-5 mt-4">
          <span class="input-group-text" id="addon-wrapping" style="width: 10rem;">Tiket Dewasa</span>
-         <input type="number" name="dewasa" id="dewasa" class="form-control" placeholder="Tiket Dewasa">
+         <input type="number" name="dewasa" id="dewasa" class="form-control" value="0">
          <span class="input-group-text" id="addon-wrapping" style="width: 10rem;">Tiket Anak-anak</span>
-         <input type="number" name="anak" id="anak" class="form-control" placeholder="Tiket Anak-anak">
+         <input type="number" name="anak" id="anak" class="form-control" value="0">
       </div>
 
       <div class="input-group flex-nowrap pe-5 mt-4">
