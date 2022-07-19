@@ -63,6 +63,12 @@ include 'etc/header.php' ?>
       </div>
 </form>
 <script type="text/javascript">
+   function setharga() {
+      var w = document.awal.wisata.selectedIndex;
+      var url_add = document.awal.wisata.options[w].value;
+      document.getElementById("harga").value = url_add;
+   }
+
    function jumlah() {
       hrg = document.getElementById("harga").value;
       an = document.getElementById("anak").value;
@@ -72,12 +78,6 @@ include 'etc/header.php' ?>
       hrgann = hrgan * 50 / 100;
       hrgsemua = hrgdew + hrgann;
       document.getElementById("total").value = hrgsemua;
-   }
-
-   function setharga() {
-      var w = document.awal.wisata.selectedIndex;
-      var url_add = document.awal.wisata.options[w].value;
-      document.getElementById("harga").value = url_add;
    }
 </script>
 
