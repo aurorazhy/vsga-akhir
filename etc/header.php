@@ -28,10 +28,13 @@
                      <a class="nav-link" href="pesan.php">Pemesanan</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="daftarharga.php">Daftar Harga</a>
+                     <a class="nav-link" href="daftarharga.php">Daftar Harga</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="histori.php">Daftar Pesan</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="tentang.php">Tentang</a>
                   </li>
                </ul>
             </div>
