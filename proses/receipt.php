@@ -4,17 +4,17 @@ include '../etc/conn.php';
 $nama = $_POST['nama'];
 $noid = $_POST['noidentitas'];
 $nohp = $_POST['nohp'];
-$harga = $_POST['wisata'];
+$hargaTempat = $_POST['wisata'];
 $tanggal = $_POST['tanggal'];
 $dewasa = $_POST['dewasa'];
 $anak = $_POST['anak'];
 
-$hrgdew = $harga * $dewasa;
-$hrgan = $harga * $anak;
-$hrgann = $hrgan * 50 / 100;
-$total = $hrgdew + $hrgann;
+$hrgDewasa = $hargaTempat * $dewasa;
+$hrgAnak = $hargaTempat * $anak;
+$hrgAnakDiskon = $hrgAnak * 50 / 100;
+$totalHarga = $hrgDewasa + $hrgAnakDiskon;
 
-mysqli_query($con, "INSERT INTO customer VALUES('','$nama','$noid','$nohp','$harga','$tanggal','$dewasa','$anak','$total')");
+mysqli_query($con, "INSERT INTO customer VALUES('','$nama','$noid','$nohp','$hargaTempat','$tanggal','$dewasa','$anak','$totalHarga')");
 
 include '../etc/header.php' ?>
 <style>
@@ -58,8 +58,8 @@ include '../etc/header.php' ?>
                <tr>
                   <td>Tempat</td>
                   <td class="divider"> : </td>
-                  <?php $te = mysqli_query($con, "SELECT nama FROM tempat WHERE harga = $harga");
-                  while ($t = mysqli_fetch_array($te)) { ?>
+                  <?php $data = mysqli_query($con, "SELECT nama FROM tempat WHERE harga = $hargaTempat");
+                  while ($t = mysqli_fetch_array($data)) { ?>
                      <td><?= $t['nama'] ?></td>
                   <?php } ?>
                </tr>
@@ -81,7 +81,7 @@ include '../etc/header.php' ?>
                <tr>
                   <td>Total</td>
                   <td class="divider"> : </td>
-                  <td><?= $total ?></td>
+                  <td><?= $totalHarga ?></td>
                </tr>
             </table>
          </form>
