@@ -11,6 +11,7 @@ include 'etc/header.php' ?>
             <th scope="col">Lokasi</th>
             <th scope="col">Harga</th>
             <th scope="col"></th>
+            <th scope="col"></th>
          </tr>
       </thead>
       <?php
@@ -22,8 +23,9 @@ include 'etc/header.php' ?>
                <th scope="row"><?= $no++ ?></th>
                <td><?= $t['nama'] ?></td>
                <td><?= $t['lokasi'] ?></td>
-               <td><?= $t['harga'] ?></td>
-               <td><a href="hapustmpt.php?idt=<?= $t['id'] ?>" class="btn btn-danger"><i class="fas fa-times"></i></a></td>
+               <td><?= $t['harga'] ?>/orang</td>
+               <td><a href="detail.php?id=<?= $t['id'] ?>" class="btn btn-warning"><i class="fas fa-info"></i></a></td>
+               <td><a href="proses/hapustmpt.php?idt=<?= $t['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Dihapus?');"><i class="fas fa-times"></i></a></td>
             </tr>
          </tbody>
       <?php } ?>

@@ -1,6 +1,6 @@
 <?php include 'etc/conn.php';
 include 'etc/header.php' ?>
-<form action="pesanact.php" method="POST" name="awal">
+<form action="proses/receipt.php" method="POST" name="awal">
    <div class="mx-5 p-5">
       <h1 class="mb-5">Form Pemesanan</h1>
 
@@ -56,10 +56,11 @@ include 'etc/header.php' ?>
          </ul>
       </div>
 
-      <button type="button" onclick="jumlah()" class="btn btn-danger">Hitung total</button>
-      <button type="submit" class="btn btn-danger">Pesan Tiket</button>
-      <button type="reset" class="btn btn-danger">Batal</button>
-   </div>
+      <div class="d-flex justify-content-center">
+         <button type="button" onclick="jumlah()" class="btn my-5 mx-2 btn-lg btn-secondary">Hitung total</button>
+         <button type="submit" class="btn my-5 mx-2 btn-lg btn-success">Pesan Tiket</button>
+         <button type="reset" class="btn my-5 mx-2 btn-lg btn-danger">Batal</button>
+      </div>
 </form>
 <script type="text/javascript">
    function jumlah() {
@@ -81,4 +82,3 @@ include 'etc/header.php' ?>
 </script>
 
 <?php include 'etc/footer.php' ?>
-a

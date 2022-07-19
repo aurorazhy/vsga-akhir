@@ -1,5 +1,5 @@
 <?php
-include 'etc/conn.php';
+include '../etc/conn.php';
 
 $nama = $_POST['nama'];
 $noid = $_POST['noidentitas'];
@@ -16,7 +16,7 @@ $total = $hrgdew + $hrgann;
 
 mysqli_query($con, "INSERT INTO customer VALUES('','$nama','$noid','$nohp','$tempat','$tanggal','$dewasa','$anak','$total')");
 
-include 'etc/header.php' ?>
+include '../etc/header.php' ?>
 <style>
    table {
       border: 0px;
@@ -35,7 +35,9 @@ include 'etc/header.php' ?>
 <div class="mx-auto pt-5 my-5" style="width: 30rem;">
    <div class="card my-5 p-3">
       <div class="card-body">
-         <p class="fs-1 fw-bold font-monospace text-center mb-5">RECEIPT</p>
+         <p class="fs-4 font-monospace text-center m-0">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
+         <p class="fs-4 font-monospace text-center m-0 ">RECEIPT</p>
+         <p class="fs-4 font-monospace text-center m-0 mt-2 mb-4">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
          <form action="">
             <table>
                <tr>
@@ -86,9 +88,8 @@ include 'etc/header.php' ?>
       </div>
    </div>
    <center>
-      <a href="index.php" class="btn btn-secondary px-4">Selesai</a>
+      <a href="../index.php" class="btn btn-secondary px-4">Selesai</a>
    </center>
 </div>
 
-<?php include 'etc/footer.php' ?>
-a
+<?php include '../etc/footer.php' ?>

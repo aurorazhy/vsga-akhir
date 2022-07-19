@@ -15,27 +15,27 @@ $id = $_GET['id']; ?>
                <?php $data = mysqli_query($con, "SELECT * FROM tempat WHERE id = '$id'");
                while ($t = mysqli_fetch_array($data)) { ?>
                   <div class="carousel-item active">
-                     <img src="images/<?= $t['gambar1'] ?>" class="d-block w-100" height="250">
+                     <img src="images/<?= $t['gambar1'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar2'] ?>" class="d-block w-100" height="250">
+                     <img src="images/<?= $t['gambar2'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar3'] ?>" class="d-block w-100" height="250">
+                     <img src="images/<?= $t['gambar3'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <img src="images/<?= $t['gambar4'] ?>" class="d-block w-100" height="250">
+                     <img src="images/<?= $t['gambar4'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="text-opacity-75" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
                      </div>
                   </div>
                <?php } ?>
@@ -62,9 +62,9 @@ $id = $_GET['id']; ?>
          </div>
       </div>
    </div>
-   <div class="d-flex flex-column my-5 ms-5 ps-3">
+   <div class="d-flex flex-column my-5 ms-4">
       <iframe width="750" height="400" src="<?= $t['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <h3 class="my-2"><?= $t['nama'] ?></h3>
+      <h3 class="my-2">Syarat dan Ketentuan</h3>
       <p class="my-2">
       <ul>
          <li>Pengunjung dewasa dikenakan harga tiket normal</li>
