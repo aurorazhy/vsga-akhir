@@ -11,6 +11,7 @@ $id = $_GET['id']; ?>
                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
+
             <div class="carousel-inner">
                <?php $data = mysqli_query($con, "SELECT * FROM tempat WHERE id = '$id'");
                while ($t = mysqli_fetch_array($data)) { ?>
@@ -62,7 +63,7 @@ $id = $_GET['id']; ?>
                         </p>
                      </div>
                   </div>
-               <?php } ?>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -75,14 +76,12 @@ $id = $_GET['id']; ?>
          </div>
 
          <div class="text">
-            <?php $data = mysqli_query($con, "SELECT * FROM tempat WHERE id = '$id'");
-            while ($t = mysqli_fetch_array($data)) { ?>
-               <h3 class="my-1"><?= $t['nama'] ?></h3>
-               <div>
-                  <i class="fas fa-map-marker-alt float-start pe-2"></i>
-                  <h6 style="max-width: 50rem;" class="my-2"><?= $t['lokasi'] ?></h6>
-               </div>
-               <p class="my-3"><?= $t['deskripsi'] ?></p>
+            <h3 class="my-1"><?= $t['nama'] ?></h3>
+            <div>
+               <i class="fas fa-map-marker-alt float-start pe-2"></i>
+               <h6 style="max-width: 50rem;" class="my-2"><?= $t['lokasi'] ?></h6>
+            </div>
+            <p class="my-3"><?= $t['deskripsi'] ?></p>
          </div>
       </div>
    </div>
@@ -104,4 +103,3 @@ $id = $_GET['id']; ?>
    </div>
 </div>
 <?php include 'etc/footer.php' ?>
-a

@@ -30,4 +30,3 @@ include 'etc/header.php' ?>
    </table>
 </div>
 <?php include 'etc/footer.php' ?>
-a

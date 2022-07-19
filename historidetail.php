@@ -19,14 +19,15 @@ include 'etc/header.php'; ?>
    <div class="mx-auto pt-5 my-5" style="width: 30rem;">
       <div class="card my-5 p-3">
          <div class="card-body">
-            <p class="fs-4 font-monospace text-center m-0">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
-            <p class="fs-4 font-monospace text-center m-0 ">RECEIPT</p>
-            <p class="fs-4 font-monospace text-center m-0 mt-2 mb-4">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
-
+            <div>
+               <p class="fs-4 font-monospace text-center m-0">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
+               <p class="fs-4 font-monospace text-center m-0 ">RECEIPT</p>
+               <p class="fs-4 font-monospace text-center m-0 mt-2 mb-4">°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
+            </div>
             <?php
             $id = $_GET['idh'];
-            $cus = mysqli_query($con, "SELECT * FROM customer INNER JOIN tempat ON tempat = harga WHERE idcus = $id");
-            while ($c = mysqli_fetch_array($cus)) { ?>
+            $data = mysqli_query($con, "SELECT * FROM customer INNER JOIN tempat ON tempat = harga WHERE idcus = $id");
+            while ($c = mysqli_fetch_array($data)) { ?>
                <table>
                   <tr>
                      <td>Nama</td>
