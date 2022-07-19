@@ -36,8 +36,8 @@
          <p>°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°</p>
          <?php
          $id = $_POST['id'];
-         $cus = mysqli_query($con, "SELECT * FROM customer INNER JOIN tempat ON tempat = harga WHERE idcus = $id");
-         while ($c = mysqli_fetch_array($cus)) { ?>
+         $data = mysqli_query($con, "SELECT * FROM customer INNER JOIN tempat ON tempat = harga WHERE idcus = $id");
+         while ($c = mysqli_fetch_array($data)) { ?>
             <table>
                <tr>
                   <td>Nama</td>
