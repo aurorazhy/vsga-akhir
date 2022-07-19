@@ -17,25 +17,49 @@ $id = $_GET['id']; ?>
                   <div class="carousel-item active">
                      <img src="images/<?= $t['gambar1'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">
+                           <?php if ($t['harga'] == '0') {
+                              echo "Tidak dipunggut biaya";
+                           } else {
+                              echo "RP" . $t['harga'] . "/orang";
+                           }; ?>
+                        </p>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <img src="images/<?= $t['gambar2'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">
+                           <?php if ($t['harga'] == '0') {
+                              echo "Tidak dipunggut biaya";
+                           } else {
+                              echo "RP" . $t['harga'] . "/orang";
+                           }; ?>
+                        </p>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <img src="images/<?= $t['gambar3'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">
+                           <?php if ($t['harga'] == '0') {
+                              echo "Tidak dipunggut biaya";
+                           } else {
+                              echo "RP" . $t['harga'] . "/orang";
+                           }; ?>
+                        </p>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <img src="images/<?= $t['gambar4'] ?>" class="d-block w-100" height="300">
                      <div class="carousel-caption d-md-block">
-                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">Rp <?= $t['harga'] ?>/orang</p>
+                        <p class="fs-6" style="background-color: rgba(245,245,245,0.5); width: 50%; margin: 0 25%; color:black;">
+                           <?php if ($t['harga'] == '0') {
+                              echo "Tidak dipunggut biaya";
+                           } else {
+                              echo "RP" . $t['harga'] . "/orang";
+                           }; ?>
+                        </p>
                      </div>
                   </div>
                <?php } ?>
