@@ -15,7 +15,7 @@ include 'etc/header.php'; ?>
       height: 2rem;
    }
 </style>
-<form action="print.php" method="post">
+<form action="proses/print.php" method="post">
    <div class="mx-auto pt-5 my-5" style="width: 30rem;">
       <div class="card my-5 p-3">
          <div class="card-body">
